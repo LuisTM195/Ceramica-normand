@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Vase A",
+        "size": "10 inches",
+        "price": 25.00
+    },
+    {
+        "name": "Vase B",
+        "size": "12 inches",
+        "price": 30.00
+    },
+    {
+        "name": "Vase C",
+        "size": "8 inches",
+        "price": 20.00
+    },
+    {
+        "name": "Vase D",
+        "size": "14 inches",
+        "price": 35.00
+    },
+    {
+        "name": "Vase E",
+        "size": "16 inches",
+        "price": 40.00
+    }
+]

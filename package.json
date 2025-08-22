@@ -1,0 +1,15 @@
+{
+  "name": "ceramic-catalog",
+  "version": "1.0.0",
+  "description": "A simple catalog website for a ceramic factory displaying vases with their sizes and prices.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined'"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
