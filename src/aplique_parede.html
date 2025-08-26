@@ -117,36 +117,56 @@
     }
 
     @media (max-width: 768px) {
-        .container {
-            grid-template-columns: 1fr;
-            background: #ffffff;
-        }
-
-        .product-image-container {
-            padding: 2vh;
-        }
-
-        .product-image {
-            width: 60%;
-            max-height: 40vh;
-        }
-
-        .product-info {
-            padding: 4vh;
-            max-height: 50vh;
-        }
-
-        h1 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-.voltar-btn {
-            bottom: 2rem;
-            left: 2rem;  /* Changed from right to left */
-            padding: 0.8rem 2rem;
-        }
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 45vh 55vh; /* Define specific heights for image and info sections */
+        background: #ffffff;
+        height: 100vh;
+        overflow: hidden;
     }
+
+    .product-image-container {
+        padding: 2vh;
+        height: 45vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-image {
+        width: auto;
+        height: 90%;
+        max-height: 40vh;
+        object-fit: contain;
+    }
+
+    .product-info {
+        padding: 2vh 4vh;
+        height: 55vh;
+        overflow-y: auto;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    table {
+        margin-top: 15px;
+    }
+
+    th, td {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+    .voltar-btn {
+        bottom: 2rem;
+        left: 2rem;
+        padding: 0.8rem 2rem;
+        z-index: 100;
+    }
+}
 </style>
 </head>
 <body>
