@@ -3,44 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <title>Pote Coimbra</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f8f8f8;
-            margin: 0;
-            padding: 20px;
-        }
+<style>
+    body {
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+        background: #ffffff;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        background: linear-gradient(to right, #f8f9fa 50%, #ffffff 50%);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+
+    .product-image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4vh;
+    }
+
+    .product-image {
+        width: 70%;
+        max-height: 70vh;
+        object-fit: contain;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.07));
+    }
+
+    .product-image:hover {
+        transform: scale(1.02) translateY(-5px);
+    }
+
+    .product-info {
+        padding: 6vh 8vh;
+        overflow-y: auto;
+        max-height: 100vh;
+    }
+
+    h1 {
+        font-size: 2.8em;
+        color: #1a1a1a;
+        margin-bottom: 40px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 30px;
+        background: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    }
+
+    th, td {
+        padding: 20px;
+        text-align: left;
+        font-size: 1.1em;
+    }
+
+    th {
+        background: #f8f9fa;
+        color: #1a1a1a;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        font-size: 0.85em;
+    }
+
+    td {
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    tr:hover {
+        background: #fafafa;
+    }
+
+    .voltar-btn {
+        position: fixed;
+        bottom: 3rem;
+        left: 3rem;  /* Changed from right to left */
+        background: #1a1a1a;
+        color: #fff;
+        padding: 1rem 2.5rem;
+        border-radius: 100px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.1em;
+        letter-spacing: 0.5px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        backdrop-filter: blur(10px);
+    }
+
+    .voltar-btn:hover {
+        background: #2d2d2d;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
         .container {
-            max-width: 600px;
-            margin: auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            padding: 20px;
-            text-align: center;
+            grid-template-columns: 1fr;
+            background: #ffffff;
         }
-        .container img {
-            width: 100%;
-            height: auto;
-            border-radius: 6px;
-            margin-bottom: 12px;
+
+        .product-image-container {
+            padding: 2vh;
         }
-        .container h1 {
+
+        .product-image {
+            width: 60%;
+            max-height: 40vh;
+        }
+
+        .product-info {
+            padding: 4vh;
+            max-height: 50vh;
+        }
+
+        h1 {
             font-size: 2em;
-            color: #333;
+            margin-bottom: 20px;
         }
-        .container p {
-            font-size: 1.2em;
-            color: #666;
+
+.voltar-btn {
+            bottom: 2rem;
+            left: 2rem;  /* Changed from right to left */
+            padding: 0.8rem 2rem;
         }
-    </style>
+    }
+</style>
 </head>
 <body>
     <div class="container">
-        <h1>Pote Coimbra</h1>
-        <img src="images/catalogo/pote_coimbra.png" alt="Pote Coimbra">
-        <p>Descrição do Pote Coimbra: Um vaso tradicional, ideal para decoração e uso prático.</p>
-        <p>Preço: €XX.XX</p>
+        <div class="product-image-container">
+            <img src="images/catalogo/pote_coimbra.png" alt="Pote Coimbra" class="product-image">
+        </div>
+        <div class="product-info">
+            <h1>Pote Coimbra</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ref.</th>
+                        <th>Diâmetro</th>
+                        <th>Altura</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>37</td>
+                        <td>22 cm</td>
+                        <td>36 cm</td>
+                        <td>€5.50</td>
+                    </tr>
+                    <tr>
+                        <td>37</td>
+                        <td>27 cm</td>
+                        <td>45 cm</td>
+                        <td>€7.50</td>
+                    </tr>
+                    <tr>
+                        <td>37</td>
+                        <td>34 cm</td>
+                        <td>53 cm</td>
+                        <td>€15.00</td>
+                    </tr>
+                    <tr>
+                        <td>37</td>
+                        <td>38 cm</td>
+                        <td>63 cm</td>
+                        <td>€30.00</td>
+                    </tr>
+                    <tr>
+                        <td>37</td>
+                        <td>40 cm</td>
+                        <td>70 cm</td>
+                        <td>€45.00</td>
+                    </tr>
+                    <tr>
+                        <td>37</td>
+                        <td> cm</td>
+                        <td>85 cm</td>
+                        <td>€75.00</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
     </div>
+    <a href="catalogo.html" class="voltar-btn">Voltar</a>
 </body>
 </html>
