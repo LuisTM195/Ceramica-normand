@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Sobre Nós | Cerâmica</title>
+    <style>
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: #ffffff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            min-height: 100vh;
+            width: 100%;
+            margin: 0;
+            background: #ffffff;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .team-section {
+            margin-top: 60px;
+            padding: 0 8vh;
+            margin-bottom: 120px;
+        }
+
+        .team-title {
+            font-size: 3em;
+            color: #1a1a1a;
+            margin-bottom: 50px;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .team-intro {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #4a4a4a;
+            text-align: center;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .team-member img:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member h2 {
+            font-size: 1.6em;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .team-member p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #4a4a4a;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .team-section {
+                padding: 0 4vh;
+                margin-top: 40px;
+                margin-bottom: 100px;
+            }
+
+            .team-title {
+                font-size: 2.2em;
+                margin-bottom: 35px;
+            }
+
+            .team-intro {
+                font-size: 1em;
+                margin-bottom: 30px;
+                padding: 0 20px;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                margin-bottom: 40px;
+            }
+
+            .team-member img {
+                width: 80%;
+                max-width: 280px;
+            }
+
+            .team-member h2 {
+                font-size: 1.4em;
+            }
+
+            .team-member p {
+                font-size: 1.1em;
+                line-height: 1.8;
+            }
+        }
+
+        .image-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 4vh;
+            padding-top: 6vh;
+        }
+
+        .company-image {
+            width: 80%;
+            max-height: 70vh;
+            object-fit: contain;
+            border-radius: 16px;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.07);
+            margin-top: 4vh;
+        }
+
+        .content {
+            padding: 6vh 8vh;
+            overflow-y: auto;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #4a4a4a;
+            margin-bottom: 24px;
+        }
+
+        .values {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            background: #f8f9fa;
+            padding: 24px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .voltar-btn {
+            position: fixed;
+            bottom: 3rem;
+            left: 3rem;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 1rem 2.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            letter-spacing: 0.5px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+        }
+
+        .voltar-btn:hover {
+            background: #2d2d2d;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                background: #ffffff;
+            }
+
+            .image-container {
+                padding: 2vh;
+                padding-top: 1vh;
+            }
+
+            .company-image {
+                width: 90%;
+                max-height: 35vh;
+                margin-top: 1vh;
+            }
+
+            .content {
+                padding: 4vh;
+            }
+
+            h1 {
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+
+            .values {
+                grid-template-columns: 1fr;
+            }
+
+            .voltar-btn {
+                bottom: 2rem;
+                left: 2rem;
+                padding: 0.8rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="images/normand_logo.jpg" alt="Cerâmica Normand" class="company-image">
+        </div>
+        <div class="content">
+            <h1>Sobre Nós</h1>
+            
+            <p>Fundada com base na paixão pelo trabalho artesanal e na procura constante de qualidade, a Cerâmica Normand, situada em Oliveira, tem vindo a afirmar-se como uma referência no setor da cerâmica. Ao longo dos anos, a fábrica tem combinado o conhecimento tradicional com técnicas modernas de produção, garantindo peças cerâmicas resistentes, esteticamente apelativas e de alto padrão.</p>
+            
+            <p>A nossa missão é fornecer produtos que satisfaçam as necessidades dos nossos clientes, desde peças decorativas a utilitárias, mantendo sempre a preocupação com a durabilidade e o design. Cada etapa da produção é cuidada ao detalhe: a seleção das matérias-primas, a preparação e moldagem da cerâmica, a cozedura rigorosa e os acabamentos finais refletem o compromisso com a excelência.</p>
+            
+            <p>Mais do que fabricar cerâmica, a Cerâmica Normand valoriza o conhecimento e a experiência da sua equipa, promovendo a formação e mantendo viva a tradição cerâmica da região. O nosso trabalho é também um contributo para a identidade cultural e económica de Oliveira, reforçando a ligação entre a empresa, a comunidade e os clientes.</p>
+            
+            <p>Ao escolher a Cerâmica Normand, escolhe mais do que produtos de qualidade: escolhe tradição, inovação e confiança. Cada peça que produzimos é o resultado de um percurso feito com dedicação, precisão e paixão pela cerâmica.</p>
+        </div>
+    </div>
+    
+    <div class="team-section">
+        <h2 class="team-title">Gerentes</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="images/carlos_oleiro1.jpg" alt="Carlos Gonçalves">
+                <h2>Carlos Gonçalves</h2>
+                <p>Carlos Gonçalves é o responsável pela Cerâmica Normand. Nascido em 1973, descobriu cedo o gosto por trabalhar o barro e nunca mais abandonou essa prática. Ao longo dos anos, foi reunindo conhecimento técnico e experiência, que hoje aplica numa produção que combina métodos tradicionais com técnicas atuais. O seu envolvimento diário garante peças sólidas, funcionais e esteticamente cuidadas.</p>
+            </div>
+
+            <div class="team-member">
+                <img src="images/matilde.jpg" alt="Matilde Silva">
+                <h2>Matilde Silva</h2>
+                <p>Matilde Silva nasceu em 1972 e cresceu entre a cerâmica, acompanhando desde cedo o ofício do pai. Essa vivência despertou-lhe a atenção ao detalhe e um olhar artístico que hoje estão presentes em cada peça. Além de participar ativamente no processo produtivo, é também quem acompanha de perto a relação com os clientes, assegurando que cada encomenda é tratada com proximidade e confiança.</p>
+            </div>
+        </div>
+    </div>
+    
+    <a href="index.html" class="voltar-btn">Voltar</a>
+</body>
+</html>
